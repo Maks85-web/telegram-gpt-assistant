@@ -88,7 +88,7 @@ async def main():
 
     runner = web.AppRunner(app)
     await runner.setup()
-    site = web.TCPSite(runner, "0.0.0.0", int(os.environ.get("PORT", 8443)))
+    site = web.TCPSite(runner, "0.0.0.0", int(os.environ.get("PORT", 8444)))
     await site.start()
 
     print(f"✅ Бот слушает на {WEBHOOK_URL}/webhook")
