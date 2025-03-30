@@ -45,7 +45,7 @@ async def ask_assistant(user_message):
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     print(f"[LOG] Получено сообщение от пользователя: {update.message.text}")
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o",
         messages=[{"role": "user", "content": update.message.text}]
     )
 
