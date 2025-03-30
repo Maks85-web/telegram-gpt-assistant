@@ -43,7 +43,13 @@ async def ask_assistant(user_message):
 
 # Обработчик сообщений Telegram
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    user_message = update.message.text
+    print(f"[LOG] Получено сообщение от пользователя: {update.message.text}")
+    response = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": update.message.text}]
+    )
+
+    await update.message.reply_text(response.choices[0].message.content)user_message = update.message.text
     await update.message.chat.send_action(action="typing")
 
     try:
