@@ -81,6 +81,7 @@ async def main():
     # Aiohttp веб-приложение
     app = web.Application()
     app.router.add_post("/webhook", webhook_handler)
+    runner = web.AppRunner(app)
 
     # Устанавливаем webhook
     await bot.set_webhook(url=f"{WEBHOOK_URL}/webhook")
