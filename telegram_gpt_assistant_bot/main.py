@@ -70,7 +70,7 @@ async def webhook_handler(request):
 # Основной запуск
 async def main():
     global application, bot
-    application: Application = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
+    application = ApplicationBuilder().token(TELEGRAM_TOKEN).build()  # type: Application
     bot = application.bot
 
     application.add_handler(CommandHandler("start", start))
