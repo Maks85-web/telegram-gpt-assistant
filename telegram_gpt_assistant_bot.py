@@ -6,7 +6,7 @@ from openai import OpenAI
 # 🔐 Вставь сюда свои ключи
 OPENAI_API_KEY = "sk-pPpKsDfa2345d7890xYzvkLmdOpQwKrTft2t3r8t5t1t1"
 ASSISTANT_ID = "asst_55S2IE1d4Q4ii9VL1BNBw1UC"
-TELEGRAM_TOKEN = "7979730053:AAFlaehUMJSMUhwkdTZ5dgQI8lnmRAKUFLQ"
+TELEGRAM_TOKEN = "7979730053:AAFDIiocR9IsfOj7bimP_ZP8rYgAdS3MCm0"
 
 # Создаём клиента OpenAI
 client = OpenAI(api_key=OPENAI_API_KEY)
