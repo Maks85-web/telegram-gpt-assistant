@@ -100,5 +100,6 @@ async def main():
     # Ожидаем завершения (не polling!)
     await asyncio.Event().wait()
     
-    if __name__ == "__main__":
-        asyncio.run(main())
+if __name__ == "__main__":
+    asyncio.run(main())
+
